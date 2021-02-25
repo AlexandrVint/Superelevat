@@ -1,0 +1,136 @@
+﻿<Window x:Class="Supelevator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Supelevator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    
+    <Grid ShowGridLines="False">
+
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+
+        <Button Name="Button1" Grid.Row="1" Grid.Column="0" Margin="0"  FontSize="18" Background="White"  Height="auto" Width="auto">
+            <TextBlock Text="Расчет естественного дымоудаления"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="200"></TextBlock>
+            
+            
+            
+        </Button>
+
+        <Button Name="Button2" Grid.Row="1" Grid.Column="1" Margin="0"  Background="White" FontSize="18" >
+            <TextBlock Text="Расчет дымоудаления непосредственно из помещения"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="80" Width="250"></TextBlock>
+        </Button>
+
+        <Button Name="Button3" Grid.Row="1" Grid.Column="2" Margin="0"  Background="White" FontSize="18" Click="Button3_Click" >
+            <TextBlock Text="Расчет дымоудаления из коридора"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="200"></TextBlock>
+        </Button>
+        <Button Name="Button4" Grid.Row="2" Grid.Column="0" Margin="0"  Background="White" FontSize="18">
+            <TextBlock Text="Расчет дымоудаления из автостоянки"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="200"></TextBlock>
+        </Button>
+
+        <Button Name="Button5" Grid.Row="2" Grid.Column="1" Margin="0"  Background="White" FontSize="18">
+            <TextBlock Text="Расчет дымоудаления из атриумов"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="200"></TextBlock>
+        </Button>
+        <Button Name="Button6" Grid.Row="2" Grid.Column="2" Margin="0"  Background="White" FontSize="18">
+            <TextBlock Text="Подпор воздуха в лифтовую шахту"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="200"></TextBlock>
+        </Button>
+        <Button Name="Button7" Grid.Row="3" Grid.Column="0" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Подпор воздуха в лестничную клетку"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="180"></TextBlock>
+        </Button>
+        <Button Name="Button8" Grid.Row="3" Grid.Column="1" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Подпор воздуха в тамбур-шлюз"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="50" Width="150"></TextBlock>
+        </Button>
+        <Button Name="Button9" Grid.Row="3" Grid.Column="2" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Подпор воздуха в пожаробезопасную зону"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="60" Width="220"></TextBlock>
+        </Button>
+
+      
+        <Button Name="Button10" Grid.Row="4" Grid.Column="0" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Аеродинамический расчет системы дымоудаления"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="70" Width="220"></TextBlock>
+        </Button>
+        
+        <Button Name="Button11" Grid.Row="4" Grid.Column="1" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Аеродинамический расчет системы подпора влздуха"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="70" Width="200"></TextBlock>
+        </Button>
+
+        <Button Name="Button12" Grid.Row="4" Grid.Column="2" Margin="0" Background="White" FontSize="18">
+            <TextBlock Text="Таблица баланса систем противодымной вентиляции"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center" Height="70" Width="200"></TextBlock>
+        </Button>
+
+
+
+
+
+
+
+
+
+
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="0" Background="White">
+            <MenuItem Header="Файл" Height="25" Width="50" Background="White">
+                <MenuItem Header="Открыть" BorderThickness="0" Height="25" />
+                <MenuItem Header="Загрузить"  BorderThickness="0" Height="25" ></MenuItem>
+                <MenuItem Header="Сохранить" BorderThickness="0" Height="25" ></MenuItem>
+                <MenuItem Header="Сохранить как" BorderThickness="0" Height="25" ></MenuItem>
+                <MenuItem Header="Печать" BorderThickness="0" Height="25" ></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" BorderThickness="0" Height="25"></MenuItem>
+                
+            </MenuItem>
+            <MenuItem Header="Вид">
+                <MenuItem Header="Панель рисования" BorderThickness="0" Height="25"></MenuItem>
+                <MenuItem Header="Сортамент огнезащитного покрытия" BorderThickness="0" Height="25"></MenuItem>
+                <MenuItem Header="Сортамент противопожарных клапанов" BorderThickness="0" Height="25"></MenuItem>
+                <MenuItem Header ="Настройка отчета" BorderThickness="0" Height="25">
+                    <MenuItem Header="Отобразить схему системы вентиляции"></MenuItem>
+                    <MenuItem Header="Отобразить таблицу аэродинамического расчета"></MenuItem>
+                </MenuItem>
+                
+            </MenuItem>
+            
+                          
+            <MenuItem Header="Справка"></MenuItem>
+        </Menu>
+
+    </Grid>
+    
+</Window>

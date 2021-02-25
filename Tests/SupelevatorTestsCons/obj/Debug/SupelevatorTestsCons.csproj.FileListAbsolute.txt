@@ -1,0 +1,7 @@
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\bin\Debug\SupelevatorTestsCons.exe.config
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\bin\Debug\SupelevatorTestsCons.exe
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\bin\Debug\SupelevatorTestsCons.pdb
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\obj\Debug\SupelevatorTestsCons.csprojAssemblyReference.cache
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\obj\Debug\SupelevatorTestsCons.csproj.CoreCompileInputs.cache
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\obj\Debug\SupelevatorTestsCons.exe
+H:\Coding\Prog1\Supelevator\Tests\SupelevatorTestsCons\obj\Debug\SupelevatorTestsCons.pdb

@@ -1,0 +1,15 @@
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\bin\Debug\ArcLineTest.exe.config
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\bin\Debug\ArcLineTest.exe
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\bin\Debug\ArcLineTest.pdb
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.csprojAssemblyReference.cache
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\MainWindow.g.cs
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\App.g.cs
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest_MarkupCompile.cache
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest_MarkupCompile.lref
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\MainWindow.baml
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.g.resources
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.Properties.Resources.resources
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.csproj.GenerateResource.cache
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.csproj.CoreCompileInputs.cache
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.exe
+H:\Coding\Prog1\Supelevator\Tests\ArcLineTest\obj\Debug\ArcLineTest.pdb

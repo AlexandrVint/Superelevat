@@ -1,0 +1,46 @@
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\bin\Debug\Supelevator.exe.config
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\bin\Debug\Supelevator.exe
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\bin\Debug\Supelevator.pdb
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.csprojAssemblyReference.cache
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\MainWindow.g.cs
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\App.g.cs
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.cache
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.lref
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\MainWindow.baml
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.g.resources
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.Properties.Resources.resources
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.GenerateResource.cache
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.CoreCompileInputs.cache
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.exe
+H:\25. Программа на C#. По ВНИИПО\1. Подпор воздуха в шахту лифта\Supelevator\Supelevator\Supelevator\Supelevator\obj\Debug\Supelevator.pdb
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.exe.config
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.exe
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.pdb
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csprojAssemblyReference.cache
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\App.g.cs
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.cache
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.lref
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.g.resources
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.Properties.Resources.resources
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.GenerateResource.cache
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.CoreCompileInputs.cache
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.exe
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.pdb
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\MainWindow.g.cs
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\MainWindow.baml
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeCorridor1.g.cs
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeCorridor1.baml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\RibbonControlsLibrary.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Microsoft.Windows.Shell.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\RibbonControlsLibrary.pdb
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\RibbonControlsLibrary.xml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Microsoft.Windows.Shell.pdb
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Microsoft.Windows.Shell.xml
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.CopyComplete
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.Core.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\System.Windows.Interactivity.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.xml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.xml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.Core.xml
