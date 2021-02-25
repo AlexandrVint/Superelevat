@@ -9,7 +9,7 @@
         Title="CalcSmokeCorridor1" Height="600" Width="1000">
 
     <UserControl Loaded="UserControl_Loaded">
-
+       
     
     <Grid ShowGridLines="False">
         
