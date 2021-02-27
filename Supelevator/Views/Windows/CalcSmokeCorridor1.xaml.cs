@@ -41,6 +41,8 @@ namespace Supelevator.Views.Windows
             UserControl_Loaded(this, e);
             var window = Window.GetWindow(this);
             window.KeyDown += HandleKeyPress;
+            CalcSmokeCorridor1 focus = new CalcSmokeCorridor1();
+            
 
 
         }
@@ -158,6 +160,23 @@ namespace Supelevator.Views.Windows
             }
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Canvas.Focusable = true;
+            TextBlock1.Focusable = false;
+        }
 
+
+
+
+        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        {
+            TextBlock1.Focusable = true;
+        }
+
+        private void Window_MouseEnter(object sender, MouseEventArgs e)
+        {
+            TextBlock1.Focusable = true;
+        }
     }
 }

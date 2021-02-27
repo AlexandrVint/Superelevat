@@ -6,41 +6,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Supelevator.Views.Windows"
         mc:Ignorable="d"
-        Title="CalcSmokeCorridor1" Height="600" Width="1000">
+        Title="CalcSmokeCorridor1" Height="600" Width="1000" Loaded="Window_Loaded" MouseLeave="Window_MouseLeave" MouseEnter="Window_MouseEnter">
 
     <UserControl Loaded="UserControl_Loaded">
-       
-    
-    <Grid ShowGridLines="False">
-        
 
 
-        <Grid.RowDefinitions>
+        <Grid ShowGridLines="False">
 
-            <RowDefinition Height="150"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="280"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
-        <r:Ribbon Grid.Row="0" Grid.ColumnSpan="2" Margin="0,-5,0,5">
-            <r:Ribbon.ApplicationMenu>
-                <r:RibbonApplicationMenu  SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window5.png">
-                    <r:RibbonApplicationMenuItem Height="100" Width="200">1</r:RibbonApplicationMenuItem>
-                    <r:RibbonApplicationMenuItem Height="100" Width="200">2</r:RibbonApplicationMenuItem>
-                    <r:RibbonApplicationMenuItem Height="100" Width="200">3</r:RibbonApplicationMenuItem>
-                </r:RibbonApplicationMenu>
-            </r:Ribbon.ApplicationMenu>
-            <r:RibbonTab Header="Home" Margin="0,0,0,-25" >
-                <r:RibbonGroup Header="Буфер обмена" Margin="0,1" Width="170">
-                    <r:RibbonButton Height="60" Width="55" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window3.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window3.png" Label="Вставить" Margin=" 0,0,0,0" ></r:RibbonButton>
-                    <r:RibbonButton Height="29" Width="96" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window6.png" Label="Вырезать" HorizontalAlignment="Right" Margin="0,-32,-155,33"></r:RibbonButton>
-                    <r:RibbonButton Height="30" Width="95" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window7.png" Label="Копировать" HorizontalAlignment="Right" Margin="5,0,0,0"></r:RibbonButton>
-                    <r:RibbonButton Height="30" Width="155" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window8.png" Label="Копировать по образцу"  Margin="-55,25,7,0" />
-                </r:RibbonGroup>
-                    <r:RibbonGroup Header="Редактирование"  Margin="0" Width="300">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="171*"/>
+                <ColumnDefinition Width="324*"></ColumnDefinition>
+                <ColumnDefinition Width="157*"/>
+            </Grid.ColumnDefinitions>
+
+            <r:Ribbon Grid.Row="0" Grid.ColumnSpan="6" Margin="0,-5,0,5">
+                <r:Ribbon.ApplicationMenu>
+                    <r:RibbonApplicationMenu  SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window5.png">
+                        <r:RibbonApplicationMenuItem Height="100" Width="200">1</r:RibbonApplicationMenuItem>
+                        <r:RibbonApplicationMenuItem Height="100" Width="200">2</r:RibbonApplicationMenuItem>
+                        <r:RibbonApplicationMenuItem Height="100" Width="200">3</r:RibbonApplicationMenuItem>
+                    </r:RibbonApplicationMenu>
+                </r:Ribbon.ApplicationMenu>
+                <r:RibbonTab Header="Home" Margin="0,0,0,-25" >
+                    <r:RibbonGroup Header="Буфер обмена" Margin="0,1" Width="170">
+                        <r:RibbonButton Height="60" Width="55" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window3.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window3.png" Label="Вставить" Margin=" 0,0,0,0" ></r:RibbonButton>
+                        <r:RibbonButton Height="29" Width="96" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window6.png" Label="Вырезать" HorizontalAlignment="Right" Margin="0,-32,-155,33"></r:RibbonButton>
+                        <r:RibbonButton Height="30" Width="95" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window7.png" Label="Копировать" HorizontalAlignment="Right" Margin="5,0,0,0"></r:RibbonButton>
+                        <r:RibbonButton Height="30" Width="155" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window8.png" Label="Копировать по образцу"  Margin="-55,25,7,0" />
+                    </r:RibbonGroup>
+                    <r:RibbonGroup Header="Редактирование"  Margin="0" Width="500">
                         <r:RibbonButton Height="55" Width="50" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" Label="Линия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Click="RibbonButton_Click"></r:RibbonButton>
 
                     </r:RibbonGroup>
@@ -53,79 +57,80 @@
 
 
 
-        </r:Ribbon>
+            </r:Ribbon>
 
 
-        <TabControl Grid.Row="1" Grid.Column="1">
-            <TabItem>
-                <TabItem.Header>Расчет</TabItem.Header>
-                <RichTextBox Name="CalcText">
+            <TabControl Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2">
+                <TabItem>
+                    <TabItem.Header>Расчет</TabItem.Header>
+                    <RichTextBox Name="CalcText">
 
-                </RichTextBox>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>Схема системы</TabItem.Header>
-                <Grid ShowGridLines="True">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-
-
-                    </Grid.ColumnDefinitions>
-                    <Label Content="Номер системы:" FontSize="16" Grid.Row="0"></Label>
-                    <TextBox Height="30" Width="100" HorizontalAlignment="Left" Margin="130,1,200,1" Padding="0,2,2,0" FontSize="16" Grid.Row="0"></TextBox>
-                    
-                    <Grid Grid.Row="1" Background="White" Margin="0,0,0,10">
+                    </RichTextBox>
+                </TabItem>
+                <TabItem Name="TabItem1">
+                    <TabItem.Header>Схема системы</TabItem.Header>
+                    <Grid ShowGridLines="False">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="35"></RowDefinition>
+                            <RowDefinition Height="105.5"></RowDefinition>
+                            <RowDefinition Height="711.5"/>
+                            <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
 
                         </Grid.ColumnDefinitions>
+                        <Label Content="Номер системы:" FontSize="16" Grid.Row="0"></Label>
+                        <TextBox x:Name="TextBlock1" Height="30" Width="100" HorizontalAlignment="Left" Margin="130,2,0,3" Padding="0,2,2,0" FontSize="16" Grid.Row="0" />
 
-                        <Viewbox Grid.Row="1" Grid.Column="2"  Margin="0" Stretch="Fill" Height="790">
-                            <Canvas x:Name="Canvas" 
+                        <Grid Grid.Row="1" Background="White" Margin="0,0,0,10" Grid.RowSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Grid.Row="1" Grid.Column="2"  Margin="0" Stretch="Fill" Height="790">
+                                <Canvas x:Name="Canvas" 
                                 
                                 Background="Black" Margin="0" Width="400" Height="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" KeyDown="Canvas_KeyDown" PreviewKeyDown="Canvas_PreviewKeyDown"  />
 
 
-                        </Viewbox>
-                        <ScrollBar Orientation="Horizontal" HorizontalAlignment="Stretch" Name="HorizScroll" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"></ScrollBar>
-                        <ScrollBar Orientation="Vertical"  Name="VertScroll" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1"/>
+                            </Viewbox>
+                            <ScrollBar Orientation="Horizontal" HorizontalAlignment="Stretch" Name="HorizScroll" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"></ScrollBar>
+                            <ScrollBar Orientation="Vertical"  Name="VertScroll" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1"/>
 
 
 
 
+                        </Grid>
                     </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>Аеродинамический расчет
-                </TabItem.Header>
-                <DataGrid VerticalScrollBarVisibility="Visible">
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>Аеродинамический расчет
+                    </TabItem.Header>
+                    <DataGrid VerticalScrollBarVisibility="Visible">
 
-                </DataGrid>
+                    </DataGrid>
 
-            </TabItem>
-            <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
-        </TabControl>
+                </TabItem>
+                <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            </TabControl>
 
-        <GridSplitter Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Width="10"></GridSplitter>
-
+            <GridSplitter Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Width="10"></GridSplitter>
 
 
 
 
 
 
-    </Grid>
+
+        </Grid>
 
     </UserControl>
 </Window>
