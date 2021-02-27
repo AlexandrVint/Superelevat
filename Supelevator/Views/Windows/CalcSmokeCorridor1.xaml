@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Supelevator.Views.Windows"
         mc:Ignorable="d"
-        Title="CalcSmokeCorridor1" Height="600" Width="1000">
+        Title="CalcSmokeCorridor1" Height="Auto" Width="Auto">
 
     <UserControl Loaded="UserControl_Loaded">
 
@@ -19,6 +19,7 @@
 
                 <RowDefinition Height="150"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"></ColumnDefinition>
@@ -86,7 +87,7 @@
 
                         <Grid Grid.Row="1" Background="White" Margin="0,0,0,10" Grid.RowSpan="2">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
+                                
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -102,8 +103,8 @@
 
 
                             </Viewbox>
-                            <ScrollBar Orientation="Horizontal" HorizontalAlignment="Stretch" Name="HorizScroll" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"></ScrollBar>
-                            <ScrollBar Orientation="Vertical"  Name="VertScroll" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1"/>
+                            <!--<ScrollBar Orientation="Horizontal" HorizontalAlignment="Stretch" Name="HorizScroll" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"></ScrollBar>
+                            <ScrollBar Orientation="Vertical"  Name="VertScroll" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1"/>-->
 
 
 

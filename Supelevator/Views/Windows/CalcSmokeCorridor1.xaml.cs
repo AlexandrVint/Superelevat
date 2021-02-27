@@ -165,10 +165,6 @@ namespace Supelevator.Views.Windows
             }
         }
 
-
-
-
-
         private void Canvas_MouseEnter(object sender, MouseEventArgs e)
         {
             TextBlock1.Focusable = false;
