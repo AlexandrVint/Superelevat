@@ -22,7 +22,7 @@ namespace Supelevator.Views.Windows
         public CalcSmokeCorridor1()
         {
             InitializeComponent();
-            
+            TextBlock1.Focusable = false;
         }
 
         public int mode;
@@ -53,6 +53,7 @@ namespace Supelevator.Views.Windows
             //var window = Window.GetWindow(this);
             //window.KeyDown += HandleKeyPress;
             //window.KeyDown -= HandleKeyPress;
+
         }
         private void HandleKeyPress(object sender, KeyEventArgs e)
         {
@@ -62,6 +63,9 @@ namespace Supelevator.Views.Windows
                 mode = 3;
             else if (e.Key == Key.E)
                 mode = 1;
+            else if (e.Key == Key.Escape)
+                mode = 0;
+            
         }
         protected void UnRegister()
         {
@@ -75,6 +79,7 @@ namespace Supelevator.Views.Windows
             listPointsX.Add(point1.X);
             listPointsY.Add(point1.Y);
             draw = true;
+            
 
         }
 
@@ -160,23 +165,29 @@ namespace Supelevator.Views.Windows
             }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+
+
+
+
+        private void Canvas_MouseEnter(object sender, MouseEventArgs e)
         {
-            Canvas.Focusable = true;
             TextBlock1.Focusable = false;
+           
         }
 
+        private void Canvas_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Canvas.Focusable = false;
+        }
 
-
-
-        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        private void TextBlock1_MouseEnter(object sender, MouseEventArgs e)
         {
             TextBlock1.Focusable = true;
         }
 
-        private void Window_MouseEnter(object sender, MouseEventArgs e)
+        private void TextBlock1_MouseLeave(object sender, MouseEventArgs e)
         {
-            TextBlock1.Focusable = true;
+            TextBlock1.Focusable = false;
         }
     }
 }

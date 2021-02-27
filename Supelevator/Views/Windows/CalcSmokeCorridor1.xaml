@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Supelevator.Views.Windows"
         mc:Ignorable="d"
-        Title="CalcSmokeCorridor1" Height="600" Width="1000" Loaded="Window_Loaded" MouseLeave="Window_MouseLeave" MouseEnter="Window_MouseEnter">
+        Title="CalcSmokeCorridor1" Height="600" Width="1000">
 
     <UserControl Loaded="UserControl_Loaded">
 
@@ -82,7 +82,7 @@
 
                         </Grid.ColumnDefinitions>
                         <Label Content="Номер системы:" FontSize="16" Grid.Row="0"></Label>
-                        <TextBox x:Name="TextBlock1" Height="30" Width="100" HorizontalAlignment="Left" Margin="130,2,0,3" Padding="0,2,2,0" FontSize="16" Grid.Row="0" />
+                        <TextBox x:Name="TextBlock1" Height="30" Width="100" HorizontalAlignment="Left" Margin="130,2,0,3" Padding="0,2,2,0" FontSize="16" Grid.Row="0" MouseEnter="TextBlock1_MouseEnter" MouseLeave="TextBlock1_MouseLeave" />
 
                         <Grid Grid.Row="1" Background="White" Margin="0,0,0,10" Grid.RowSpan="2">
                             <Grid.RowDefinitions>
@@ -98,7 +98,7 @@
                             <Viewbox Grid.Row="1" Grid.Column="2"  Margin="0" Stretch="Fill" Height="790">
                                 <Canvas x:Name="Canvas" 
                                 
-                                Background="Black" Margin="0" Width="400" Height="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" KeyDown="Canvas_KeyDown" PreviewKeyDown="Canvas_PreviewKeyDown"  />
+                                Background="Black" Margin="0" Width="400" Height="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" KeyDown="Canvas_KeyDown" PreviewKeyDown="Canvas_PreviewKeyDown" MouseEnter="Canvas_MouseEnter" MouseLeave="Canvas_MouseLeave"  />
 
 
                             </Viewbox>
