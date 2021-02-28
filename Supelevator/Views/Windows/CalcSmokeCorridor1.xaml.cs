@@ -158,6 +158,7 @@ namespace Supelevator.Views.Windows
                         line.X2 = stop.X;
                         line.Y2 = line.Y1;
                         Canvas.Children.Add(line);
+                        lines.Add(line);
                         break;
                     case 3: // вертикальная линия
                         line.Y1 = start.Y;
@@ -165,6 +166,7 @@ namespace Supelevator.Views.Windows
                         line.Y2 = stop.Y;
                         line.X2 = line.X1;
                         Canvas.Children.Add(line);
+                        lines.Add(line);
                         break;
                 }
             }
