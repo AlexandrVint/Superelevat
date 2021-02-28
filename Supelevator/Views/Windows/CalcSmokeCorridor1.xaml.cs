@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
+
 namespace Supelevator.Views.Windows
 {
     /// <summary>
@@ -21,20 +23,28 @@ namespace Supelevator.Views.Windows
     {
         public CalcSmokeCorridor1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+
             TextBlock1.Focusable = false;
         }
 
         public int mode;
 
 
-
+        List<Line> lines = new List<Line>();
         List<double> listPointsX = new List<double>();
         List<double> listPointsY = new List<double>();
         Point point1 = new Point();
         Point point2 = new Point();
-        bool draw;
+        Point point3 = new Point();
+        Point point4 = new Point();
 
+       
+
+
+
+        bool draw;
+        
 
         private void RibbonButton_Click(object sender, RoutedEventArgs e)
         {
@@ -75,11 +85,16 @@ namespace Supelevator.Views.Windows
 
         private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            point1 = Mouse.GetPosition(Canvas);
-            listPointsX.Add(point1.X);
-            listPointsY.Add(point1.Y);
-            draw = true;
-            
+          
+                point1 = Mouse.GetPosition(Canvas);
+
+                listPointsX.Add(point1.X);
+                listPointsY.Add(point1.Y);
+
+
+                draw = true;
+           
+
 
         }
 
@@ -93,15 +108,19 @@ namespace Supelevator.Views.Windows
 
         private void Canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            draw = false;
-            if (draw == false)
-            {
+ 
                 point2 = Mouse.GetPosition(Canvas);
                 listPointsX.Add(point2.X);
                 listPointsY.Add(point2.Y);
+
+           
                 DrawLine(point1, point2, true);
-            }
+            point3 = point2;
+            point4 = Mouse.GetPosition(Canvas);
+            DrawLine(point2, point3, true);
+
         }
+        
 
         public void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
@@ -119,50 +138,136 @@ namespace Supelevator.Views.Windows
             line.Stroke = Brushes.White;
             line.StrokeThickness = 1;
             
-            switch (mode)
+
+
+            if (lines.Count==0)
             {
-                case 1: // стандартная линия
-                    line.X1 = start.X;
-                    line.Y1 = start.Y;
-                    line.X2 = stop.X;
-                    line.Y2 = stop.Y;
-                    Canvas.Children.Add(line);
-                    break;
-                case 2: // горизонтальная линия
-                    line.X1 = start.X;
-                    line.Y1 = start.Y;
-                    line.X2 = stop.X;
-                    line.Y2 = line.Y1;
-                    Canvas.Children.Add(line);
-                    break;
-                case 3: // вертикальная линия
-                    line.Y1 = start.Y;
-                    line.X1 = start.X;
-                    line.Y2 = stop.Y;
-                    line.X2 = line.X1;
-                    Canvas.Children.Add(line);
-                    break;
+                switch (mode)
+                {
+                    case 1: // стандартная линия
+                        line.X1 = start.X;
+                        line.Y1 = start.Y;
+                        line.X2 = stop.X;
+                        line.Y2 = stop.Y;
+                        Canvas.Children.Add(line);
+                        lines.Add(line);
+                        break;
+                    case 2: // горизонтальная линия
+                        line.X1 = start.X;
+                        line.Y1 = start.Y;
+                        line.X2 = stop.X;
+                        line.Y2 = line.Y1;
+                        Canvas.Children.Add(line);
+                        break;
+                    case 3: // вертикальная линия
+                        line.Y1 = start.Y;
+                        line.X1 = start.X;
+                        line.Y2 = stop.Y;
+                        line.X2 = line.X1;
+                        Canvas.Children.Add(line);
+                        break;
+                }
             }
+            else
+            {
+                
+                switch (mode)
+                {
+                    
+
+                    case 1: // стандартная линия
+                        line.X1 = lines[lines.Count - 1].X2;
+                        line.X2 = Mouse.GetPosition(Canvas).X;
+                        line.Y1 = lines[lines.Count - 1].Y2;
+                        line.Y2 = Mouse.GetPosition(Canvas).Y;
+                        Canvas.Children.Add(line);
+                        lines.Add(line);
+
+
+
+
+                        //line.X1 = start.X;
+                        //line.Y1 = start.Y;
+                        //line.X2 = stop.X;
+                        //line.Y2 = stop.Y;
+                        //Canvas.Children.Add(line);
+
+                        break;
+                    case 2: // горизонтальная линия
+                        line.X1 = start.X;
+                        line.Y1 = start.Y;
+                        line.X2 = stop.X;
+                        line.Y2 = line.Y1;
+                        Canvas.Children.Add(line);
+                        break;
+                    case 3: // вертикальная линия
+                        line.Y1 = start.Y;
+                        line.X1 = start.X;
+                        line.Y2 = stop.Y;
+                        line.X2 = line.X1;
+                        Canvas.Children.Add(line);
+                        break;
+                }
+            }
+           
+
+
+            //if (line != null)
+            //{
+            //    switch (mode)
+            //    {
+            //        case 1: // стандартная линия
+            //            line.X1 = start.X;
+            //            line.Y1 = start.Y;
+            //            line.X2 = stop.X;
+            //            line.Y2 = stop.Y;
+            //            Canvas.Children.Add(line);
+
+            //            break;
+            //        case 2: // горизонтальная линия
+            //            line.X1 = start.X;
+            //            line.Y1 = start.Y;
+            //            line.X2 = stop.X;
+            //            line.Y2 = line.Y1;
+            //            Canvas.Children.Add(line);
+            //            break;
+            //        case 3: // вертикальная линия
+            //            line.Y1 = start.Y;
+            //            line.X1 = start.X;
+            //            line.Y2 = stop.Y;
+            //            line.X2 = line.X1;
+            //            Canvas.Children.Add(line);
+            //            break;
+            //    }
+            //}
+ 
+        }
+
+
+        public void DrawLine_next(Point start, Point stop, bool move)
+        {
+            point3 = Mouse.GetPosition(Canvas);
+            for (int i=3; i<1000; i++)
+            {
+                listPointsX.Add (point3.X);
+                listPointsY.Add(point3.Y);
+            }
+            //DrawLine(point2, point3, true);
+
+
+
+
+
+
         }
 
         private void Canvas_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             Line line = new Line();
             line.Stroke = Brushes.White;
-            line.StrokeThickness = 2;
+            line.StrokeThickness = 1;
 
-            if (e.Key == Key.LeftShift)
-            {
-                point1.X = Mouse.GetPosition(Canvas).X - Canvas.Margin.Left;
-                point2.X = Mouse.GetPosition(Canvas).X - Canvas.Margin.Left;
-                point1.Y = Mouse.GetPosition(Canvas).Y - Canvas.Margin.Top;
-                point2.Y = point1.Y;
-                line.X1 = point1.X;
-                line.X2 = point2.X;
-                line.Y1 = point1.Y;
-                line.Y2 = line.Y1;
-                Canvas.Children.Add(line);
-            }
+
         }
 
         private void Canvas_MouseEnter(object sender, MouseEventArgs e)
@@ -185,5 +290,7 @@ namespace Supelevator.Views.Windows
         {
             TextBlock1.Focusable = false;
         }
+        
     }
+    
 }
