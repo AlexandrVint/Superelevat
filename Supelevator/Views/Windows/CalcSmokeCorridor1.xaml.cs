@@ -184,28 +184,29 @@ namespace Supelevator.Views.Windows
                         lines.Add(line);
 
 
-
-
-                        //line.X1 = start.X;
-                        //line.Y1 = start.Y;
-                        //line.X2 = stop.X;
-                        //line.Y2 = stop.Y;
-                        //Canvas.Children.Add(line);
-
                         break;
                     case 2: // горизонтальная линия
-                        line.X1 = start.X;
-                        line.Y1 = start.Y;
-                        line.X2 = stop.X;
+                        line.X1 = lines[lines.Count - 1].X2;
+                        line.Y1 = lines[lines.Count - 1].Y2;
+                        line.X2 = Mouse.GetPosition(Canvas).X;
                         line.Y2 = line.Y1;
                         Canvas.Children.Add(line);
+                        lines.Add(line);
+
                         break;
                     case 3: // вертикальная линия
-                        line.Y1 = start.Y;
-                        line.X1 = start.X;
-                        line.Y2 = stop.Y;
+                        line.X1 = lines[lines.Count - 1].X2;
+                        line.Y1 = lines[lines.Count - 1].Y2;
                         line.X2 = line.X1;
+                        line.Y2= Mouse.GetPosition(Canvas).Y;
                         Canvas.Children.Add(line);
+                        lines.Add(line);
+
+                        //line.Y1 = start.Y;
+                        //line.X1 = start.X;
+                        //line.Y2 = stop.Y;
+                        //line.X2 = line.X1;
+                        //Canvas.Children.Add(line);
                         break;
                 }
             }
