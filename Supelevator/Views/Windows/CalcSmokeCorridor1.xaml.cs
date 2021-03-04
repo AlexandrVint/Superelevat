@@ -38,8 +38,8 @@ namespace Supelevator.Views.Windows
         Point point2 = new Point();
         Point point3 = new Point();
         Point point4 = new Point();
+        
 
-       
 
 
 
@@ -90,20 +90,39 @@ namespace Supelevator.Views.Windows
 
                 listPointsX.Add(point1.X);
                 listPointsY.Add(point1.Y);
+            
 
 
-                draw = true;
+
+
+
+            draw = true;
            
 
 
         }
 
-        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        internal void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
             if(draw)
             {
-                Point p = Mouse.GetPosition(Canvas);
+                //Ellipse el = new Ellipse();
+                //el.Width = 10;
+                //el.Height = 10;
+                //el.StrokeThickness = 10;
+                //el.Fill = Brushes.Blue;
+                //el.Margin = new Thickness(point1.X - 5, point1.Y - 5, 0, 0);
+                //el.Width = 10;
+                //el.Height = 10;
+                //el.StrokeThickness = 10;
+                //el.Fill = Brushes.Blue;
+                //el.Margin = new Thickness(point2.X - 5, point2.Y - 5, 0, 0);
+                //Canvas.Children.Add(el);
+
+
+                //Point p = Mouse.GetPosition(Canvas);
             }
+            
         }
 
         private void Canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -112,12 +131,14 @@ namespace Supelevator.Views.Windows
                 point2 = Mouse.GetPosition(Canvas);
                 listPointsX.Add(point2.X);
                 listPointsY.Add(point2.Y);
+            
 
-           
-                DrawLine(point1, point2, true);
+
+            DrawLine(point1, point2, true);
             point3 = point2;
             point4 = Mouse.GetPosition(Canvas);
             DrawLine(point2, point3, true);
+
 
         }
         
@@ -130,14 +151,26 @@ namespace Supelevator.Views.Windows
                 mode = 3;
             else if (e.Key == Key.E)
                 mode = 1;
+
         }
 
         public void DrawLine(Point start, Point stop, bool move)
         {
             Line line = new Line();
             line.Stroke = Brushes.White;
-            line.StrokeThickness = 1;
-            
+            line.StrokeThickness = 2;
+            Ellipse el1 = new Ellipse();
+            el1.Width = 10;
+            el1.Height = 10;
+            el1.StrokeThickness = 10;
+            el1.Fill = Brushes.Blue;
+            Ellipse el2 = new Ellipse();
+            el2.Width = 10;
+            el2.Height = 10;
+            el2.StrokeThickness = 10;
+            el2.Fill = Brushes.Blue;
+
+
 
 
             if (lines.Count==0)
@@ -149,22 +182,39 @@ namespace Supelevator.Views.Windows
                         line.Y1 = start.Y;
                         line.X2 = stop.X;
                         line.Y2 = stop.Y;
+                        
+                        el1.Margin = new Thickness(line.X1 - 5, line.Y1 - 5, 0, 0);
+                        Canvas.Children.Add(el1);
+
                         Canvas.Children.Add(line);
+
                         lines.Add(line);
+                       
+
                         break;
                     case 2: // горизонтальная линия
                         line.X1 = start.X;
                         line.Y1 = start.Y;
                         line.X2 = stop.X;
                         line.Y2 = line.Y1;
+
+                        el1.Margin = new Thickness(line.X1 - 5, line.Y1 - 5, 0, 0);
+                        Canvas.Children.Add(el1);
+
                         Canvas.Children.Add(line);
                         lines.Add(line);
+
+
                         break;
                     case 3: // вертикальная линия
                         line.Y1 = start.Y;
                         line.X1 = start.X;
                         line.Y2 = stop.Y;
                         line.X2 = line.X1;
+
+                        el1.Margin = new Thickness(line.X1 - 5, line.Y1 - 5, 0, 0);
+                        Canvas.Children.Add(el1);
+
                         Canvas.Children.Add(line);
                         lines.Add(line);
                         break;
@@ -183,6 +233,10 @@ namespace Supelevator.Views.Windows
                         line.Y1 = lines[lines.Count - 1].Y2;
                         line.Y2 = Mouse.GetPosition(Canvas).Y;
                         Canvas.Children.Add(line);
+
+                        el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
+                        Canvas.Children.Add(el2);
+
                         lines.Add(line);
 
 
@@ -193,6 +247,10 @@ namespace Supelevator.Views.Windows
                         line.X2 = Mouse.GetPosition(Canvas).X;
                         line.Y2 = line.Y1;
                         Canvas.Children.Add(line);
+
+                        el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
+                        Canvas.Children.Add(el2);
+
                         lines.Add(line);
 
                         break;
@@ -201,6 +259,10 @@ namespace Supelevator.Views.Windows
                         line.Y1 = lines[lines.Count - 1].Y2;
                         line.X2 = line.X1;
                         line.Y2= Mouse.GetPosition(Canvas).Y;
+
+                        el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
+                        Canvas.Children.Add(el2);
+
                         Canvas.Children.Add(line);
                         lines.Add(line);
 

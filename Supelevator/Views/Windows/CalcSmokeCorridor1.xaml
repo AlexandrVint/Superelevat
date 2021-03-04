@@ -22,12 +22,12 @@
                 <RowDefinition Height="30"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="100*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"/>
                 <ColumnDefinition Width="60*"/>
                 <ColumnDefinition Width="171*"/>
-                <ColumnDefinition Width="324*"></ColumnDefinition>
-                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="800*"></ColumnDefinition>
+                <ColumnDefinition Width="300*"/>
             </Grid.ColumnDefinitions>
             <StatusBar Grid.Row="3" Grid.ColumnSpan="6" Name="StatusBar_CalcSmoceCoridor" >
                 <TextBlock Name="Text_StatusBar_CalcSmoceCoridor" HorizontalAlignment="Left" Width="50" Text="Статус:" FontSize="16"></TextBlock>
@@ -101,10 +101,10 @@
 
                             </Grid.ColumnDefinitions>
 
-                            <Viewbox Grid.Row="1" Grid.Column="2"  Margin="0" Stretch="Fill" Height="790">
+                            <Viewbox Grid.Row="1" Grid.Column="2"  Margin="0" Stretch="Fill" Height="2000" Width="2000">
                                 <Canvas x:Name="Canvas" 
                                 
-                                Background="Black" Margin="0" Width="400" Height="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" KeyDown="Canvas_KeyDown" PreviewKeyDown="Canvas_PreviewKeyDown" MouseEnter="Canvas_MouseEnter" MouseLeave="Canvas_MouseLeave"  />
+                                Background="Black" Margin="0" Width="2000" Height="2000" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp" KeyDown="Canvas_KeyDown" PreviewKeyDown="Canvas_PreviewKeyDown" MouseEnter="Canvas_MouseEnter" MouseLeave="Canvas_MouseLeave"  />
 
 
                             </Viewbox>
@@ -128,7 +128,7 @@
                 <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
             </TabControl>
 
-            <GridSplitter Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Width="10"></GridSplitter>
+            <!--<GridSplitter Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Width="10"></GridSplitter>-->
 
 
 
