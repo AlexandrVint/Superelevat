@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Supelevator.Models;
 
 
 
@@ -38,6 +39,8 @@ namespace Supelevator.Views.Windows
         Point point2 = new Point();
         Point point3 = new Point();
         Point point4 = new Point();
+        Point point5 = new Point();
+
         
 
 
@@ -75,7 +78,9 @@ namespace Supelevator.Views.Windows
                 mode = 1;
             else if (e.Key == Key.Escape)
                 mode = 0;
-            
+            else if (e.Key == Key.Space)
+                mode = 4;
+
         }
         protected void UnRegister()
         {
@@ -104,24 +109,8 @@ namespace Supelevator.Views.Windows
 
         internal void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if(draw)
-            {
-                //Ellipse el = new Ellipse();
-                //el.Width = 10;
-                //el.Height = 10;
-                //el.StrokeThickness = 10;
-                //el.Fill = Brushes.Blue;
-                //el.Margin = new Thickness(point1.X - 5, point1.Y - 5, 0, 0);
-                //el.Width = 10;
-                //el.Height = 10;
-                //el.StrokeThickness = 10;
-                //el.Fill = Brushes.Blue;
-                //el.Margin = new Thickness(point2.X - 5, point2.Y - 5, 0, 0);
-                //Canvas.Children.Add(el);
+            
 
-
-                //Point p = Mouse.GetPosition(Canvas);
-            }
             
         }
 
@@ -136,10 +125,10 @@ namespace Supelevator.Views.Windows
 
             DrawLine(point1, point2, true);
             point3 = point2;
-            point4 = Mouse.GetPosition(Canvas);
             DrawLine(point2, point3, true);
-
-
+            //point4 = Mouse.GetPosition(Canvas);
+            //point5 = Mouse.GetPosition(Canvas);
+            //DrawLine(point4, point5, true);
         }
         
 
@@ -151,6 +140,10 @@ namespace Supelevator.Views.Windows
                 mode = 3;
             else if (e.Key == Key.E)
                 mode = 1;
+            else if (e.Key == Key.Escape)
+                mode = 0;
+            else if (e.Key == Key.Space)
+                mode = 4;
 
         }
 
@@ -177,6 +170,10 @@ namespace Supelevator.Views.Windows
             {
                 switch (mode)
                 {
+                    case 0: // сброс рисования
+                        mode = 0;
+                        break;
+
                     case 1: // стандартная линия
                         line.X1 = start.X;
                         line.Y1 = start.Y;
@@ -218,6 +215,13 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(line);
                         lines.Add(line);
                         break;
+
+                   
+
+
+
+
+
                 }
             }
             else
@@ -225,13 +229,22 @@ namespace Supelevator.Views.Windows
                 
                 switch (mode)
                 {
-                    
+                    case 0: // сброс рисования
+                        mode = 0;
+                        break;
+
 
                     case 1: // стандартная линия
+                       
                         line.X1 = lines[lines.Count - 1].X2;
                         line.X2 = Mouse.GetPosition(Canvas).X;
                         line.Y1 = lines[lines.Count - 1].Y2;
                         line.Y2 = Mouse.GetPosition(Canvas).Y;
+
+
+
+
+
                         Canvas.Children.Add(line);
 
                         el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
@@ -266,11 +279,21 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(line);
                         lines.Add(line);
 
-                        //line.Y1 = start.Y;
-                        //line.X1 = start.X;
-                        //line.Y2 = stop.Y;
-                        //line.X2 = line.X1;
-                        //Canvas.Children.Add(line);
+                        break;
+
+                    case 4: // сброс рисования и рисование линий с произвольной точкой
+                        line.X1 = Mouse.GetPosition(Canvas).X;
+                        line.Y1 = Mouse.GetPosition(Canvas).Y;
+                        line.X2 = Mouse.GetPosition(Canvas).X;
+                        line.Y2 = Mouse.GetPosition(Canvas).Y;
+
+                        el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
+                        Canvas.Children.Add(el2);
+
+                        Canvas.Children.Add(line);
+                        lines.Add(line);
+
+
                         break;
                 }
             }

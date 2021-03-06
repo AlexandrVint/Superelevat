@@ -7,14 +7,31 @@
         xmlns:local="clr-namespace:SupelevatorWPFTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <r:Ribbon></r:Ribbon>
+    <Grid MouseMove="Grid_MouseMove" Background="Transparent">
+        <ItemsControl Name="MyItemsControl">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Canvas.Left" Value="{Binding X}"/>
+                    <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Ellipse Width="4" Height="4" Fill="Black">
+                        <Ellipse.RenderTransform>
+                            <TranslateTransform X="-2" Y="-2"/>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
 
-
-
+        <Line Name="MyLine" Stroke="Black"
+          X1="10" Y1="10" X2="100" Y2="100"/>
     </Grid>
 </Window>
