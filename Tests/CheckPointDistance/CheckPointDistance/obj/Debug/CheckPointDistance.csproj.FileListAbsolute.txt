@@ -1,0 +1,15 @@
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\bin\Debug\CheckPointDistance.exe.config
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\bin\Debug\CheckPointDistance.exe
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\bin\Debug\CheckPointDistance.pdb
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.csprojAssemblyReference.cache
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\MainWindow.g.cs
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\App.g.cs
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance_MarkupCompile.cache
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance_MarkupCompile.lref
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\MainWindow.baml
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.g.resources
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.Properties.Resources.resources
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.csproj.GenerateResource.cache
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.csproj.CoreCompileInputs.cache
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.exe
+H:\Coding\Prog1\Supelevator\Tests\CheckPointDistance\CheckPointDistance\obj\Debug\CheckPointDistance.pdb
