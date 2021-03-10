@@ -26,20 +26,32 @@ namespace CheckPointDistance
         }
 
         Point point1 = new Point(100, 100);
+        
         Point point2 = new Point(200, 200);
+        Point point3 = new Point(300, 200);
+        Point point4 = new Point(150, 150);
+        Point point5 = new Point(250, 250);
+
         Point pointX = new Point();
         List<Ellipse> listEl = new List<Ellipse>();
+
+        List<Point> list_points = new List<Point>();
+        
         
 
 
         public void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
+
+
             
-  
+
 
             Ellipse el1 = new Ellipse();
             Ellipse el2 = new Ellipse();
-           
+            Ellipse el3 = new Ellipse();
+            Ellipse el4 = new Ellipse();
+            Ellipse el5 = new Ellipse();
 
 
             el1.Width = 10;
@@ -48,6 +60,7 @@ namespace CheckPointDistance
             el1.Stroke = Brushes.Blue;
             el1.Margin = new Thickness(point1.X - 5, point1.Y - 5, 0, 0);
 
+            
 
             el2.Width = 10;
             el2.Height = 10;
@@ -55,15 +68,44 @@ namespace CheckPointDistance
             el2.Stroke = Brushes.Blue;
             el2.Margin = new Thickness(point2.X - 5, point2.Y - 5, 0, 0);
 
-            
+            el3.Width = 10;
+            el3.Height = 10;
+            el3.StrokeThickness = 5;
+            el3.Stroke = Brushes.Blue;
+            el3.Margin = new Thickness(point3.X - 5, point3.Y - 5, 0, 0);
+
+            el4.Width = 10;
+            el4.Height = 10;
+            el4.StrokeThickness = 5;
+            el4.Stroke = Brushes.Blue;
+            el4.Margin = new Thickness(point4.X - 5, point4.Y - 5, 0, 0);
+
+            el5.Width = 10;
+            el5.Height = 10;
+            el5.StrokeThickness = 5;
+            el5.Stroke = Brushes.Blue;
+            el5.Margin = new Thickness(point5.X - 5, point5.Y - 5, 0, 0);
+
+
 
 
             Canvas.Children.Add(el1);
             Canvas.Children.Add(el2);
+            Canvas.Children.Add(el3);
+            Canvas.Children.Add(el4);
+            Canvas.Children.Add(el5);
 
-            
+
             listEl.Add(el1);
             listEl.Add(el2);
+            listEl.Add(el3);
+            listEl.Add(el4);
+            listEl.Add(el5);
+
+           
+
+       
+
         }
 
         public void distance(Point poin1, Point point2, double X, double Y)
@@ -105,10 +147,14 @@ namespace CheckPointDistance
 
                 
                 Canvas.Children.Add(elX);
+                listEl.Add(elX);
+
             }
 
-            
-
         }
+
+
+
     }
+
 }

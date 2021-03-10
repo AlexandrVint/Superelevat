@@ -35,6 +35,7 @@ namespace Supelevator.Views.Windows
 
 
         List<Line> lines = new List<Line>();
+        List<Point> points = new List<Point>();
         
         List<double> listPointsX = new List<double>();
         List<double> listPointsY = new List<double>();
@@ -67,6 +68,8 @@ namespace Supelevator.Views.Windows
         }
         private void HandleKeyPress(object sender, KeyEventArgs e)
         {
+
+
             if (e.Key == Key.Q)
                 mode = 2;
             else if (e.Key == Key.W)
@@ -78,10 +81,10 @@ namespace Supelevator.Views.Windows
             else if (e.Key == Key.Space)
             {
                 mode = 4;
-                
+
 
             }
-                
+
 
         }
         protected void UnRegister()
@@ -94,6 +97,7 @@ namespace Supelevator.Views.Windows
         {
           
                 point1 = Mouse.GetPosition(Canvas);
+                points.Add(point1);
 
                 listPointsX.Add(point1.X);
                 listPointsY.Add(point1.Y);
@@ -122,6 +126,7 @@ namespace Supelevator.Views.Windows
         {
  
                 point2 = Mouse.GetPosition(Canvas);
+                points.Add(point2);
                 listPointsX.Add(point2.X);
                 listPointsY.Add(point2.Y);
             
@@ -129,8 +134,10 @@ namespace Supelevator.Views.Windows
 
             DrawLine(point1, point2, true);
             point3 = point2;
+            points.Add(point3);
 
             point4 = Mouse.GetPosition(Canvas);
+            points.Add(point4);
             DrawLine(point3, point4, true);
             listPointsX.Add(point4.X);
             listPointsY.Add(point4.Y);
@@ -189,7 +196,7 @@ namespace Supelevator.Views.Windows
 
 
 
-            if (lines.Count==0)
+            if (lines.Count == 0)
             {
                 switch (mode)
                 {
@@ -201,7 +208,7 @@ namespace Supelevator.Views.Windows
                         line.X1 = start.X;
                         line.Y1 = start.Y;
                         line.X2 = stop.X;
-                        line.Y2 = stop.Y;                       
+                        line.Y2 = stop.Y;
                         el1.Margin = new Thickness(line.X1 - 5, line.Y1 - 5, 0, 0);
                         Canvas.Children.Add(el1);
                         Canvas.Children.Add(line);
@@ -221,7 +228,7 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(el1);
 
                         Canvas.Children.Add(line);
-                       lines.Add(line);
+                        lines.Add(line);
 
 
                         break;
@@ -235,14 +242,14 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(el1);
 
                         Canvas.Children.Add(line);
-                       lines.Add(line);
+                        lines.Add(line);
                         break;
 
                 }
             }
             else
             {
-                
+
                 switch (mode)
                 {
                     case 0: // сброс рисования
@@ -251,7 +258,7 @@ namespace Supelevator.Views.Windows
 
 
                     case 1: // стандартная линия
-                       
+
                         line.X1 = lines[lines.Count - 1].X2;
                         line.X2 = Mouse.GetPosition(Canvas).X;
                         line.Y1 = lines[lines.Count - 1].Y2;
@@ -263,7 +270,7 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(el2);
 
 
-                       lines.Add(line);
+                        lines.Add(line);
 
 
                         break;
@@ -277,20 +284,20 @@ namespace Supelevator.Views.Windows
                         el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
                         Canvas.Children.Add(el2);
 
-                      lines.Add(line);
+                        lines.Add(line);
 
                         break;
                     case 3: // вертикальная линия
                         line.X1 = lines[lines.Count - 1].X2;
                         line.Y1 = lines[lines.Count - 1].Y2;
                         line.X2 = line.X1;
-                        line.Y2= Mouse.GetPosition(Canvas).Y;
+                        line.Y2 = Mouse.GetPosition(Canvas).Y;
 
                         el2.Margin = new Thickness(line.X2 - 5, line.Y2 - 5, 0, 0);
                         Canvas.Children.Add(el2);
 
                         Canvas.Children.Add(line);
-                      lines.Add(line);
+                        lines.Add(line);
 
                         break;
 
@@ -304,15 +311,13 @@ namespace Supelevator.Views.Windows
                         Canvas.Children.Add(el2);
                         Canvas.Children.Add(line);
 
-                      lines.Add(line);
+                        lines.Add(line);
 
                         break;
-                        
+
                 }
-                
+
             }
-
-
 
 
             //if (line != null)
@@ -384,15 +389,17 @@ namespace Supelevator.Views.Windows
             TextBlock1.Focusable = true;
         }
 
+        
         private void TextBlock1_MouseLeave(object sender, MouseEventArgs e)
         {
+            
             TextBlock1.Focusable = false;
         }
+
+
+
+
         
-        
-
-
-
-}
+    }
     
 }

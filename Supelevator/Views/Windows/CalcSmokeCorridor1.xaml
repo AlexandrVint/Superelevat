@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Supelevator.Views.Windows"
         mc:Ignorable="d"
-        Title="CalcSmokeCorridor1" Height="Auto" Width="Auto">
+        Title="CalcSmokeCorridor1" Height="622.333" Width="1266.667">
 
     <UserControl Loaded="UserControl_Loaded">
 
@@ -23,18 +23,23 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"></ColumnDefinition>
-                <ColumnDefinition Width="50*"/>
-                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="171*"/>
                 <ColumnDefinition Width="800*"></ColumnDefinition>
                 <ColumnDefinition Width="300*"/>
             </Grid.ColumnDefinitions>
+
+            <!--<Button x:Name="initial_data_corridor" Width="200" Height="100" Content="Пожарная нагрузка" Grid.Row="1" Grid.Column="1"Margin="0,0,0,0"></Button>-->
+
+
+
             <StatusBar Grid.Row="3" Grid.ColumnSpan="6" Name="StatusBar_CalcSmoceCoridor" >
                 <TextBlock Name="Text_StatusBar_CalcSmoceCoridor" HorizontalAlignment="Left" Width="50" Text="Статус:" FontSize="16"></TextBlock>
                 <TextBlock Name="Text_StatusBar_CalcSmoceCoridor_Status" Margin="0,0,0,0" HorizontalAlignment="Left" Width="600" Text="Привет" FontSize="16"></TextBlock>
             </StatusBar>
-            
-            
+
+
             <r:Ribbon Grid.Row="0" Grid.ColumnSpan="6" Margin="0,-5,0,5">
                 <r:Ribbon.ApplicationMenu>
                     <r:RibbonApplicationMenu  SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window5.png">
@@ -51,7 +56,8 @@
                         <r:RibbonButton Height="30" Width="155" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window8.png" Label="Копировать по образцу"  Margin="-55,25,7,0" />
                     </r:RibbonGroup>
                     <r:RibbonGroup Header="Редактирование"  Margin="0" Width="500">
-                        <r:RibbonButton Height="55" Width="50" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" Label="Линия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Click="RibbonButton_Click"></r:RibbonButton>
+                        <r:RibbonButton Height="55" Width="50" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\window9.png" Label="Участок" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Click="RibbonButton_Click"></r:RibbonButton>
+                        <r:RibbonButton Height="55" Width="50" SmallImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\Клапан.png" LargeImageSource="H:\Coding\Prog1\Supelevator\Supelevator\images\Клапан.png" Label="Клапан" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Click="RibbonButton_Click"></r:RibbonButton>
 
                     </r:RibbonGroup>
 
@@ -92,7 +98,7 @@
 
                         <Grid Grid.Row="1" Background="White" Margin="0,0,0,10" Grid.RowSpan="2">
                             <Grid.RowDefinitions>
-                                
+
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -125,18 +131,26 @@
                     </DataGrid>
 
                 </TabItem>
-                <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+
             </TabControl>
+            
 
             <!--<GridSplitter Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Width="10"></GridSplitter>-->
 
-
-
+            <StackPanel Grid.ColumnSpan="4" Grid.Row="1" Margin="20,10,5,5" Orientation="Vertical">
+                <Label> Привет </Label>
+                <Button Height="30"> Привет </Button>
+                
+                
+                
+            </StackPanel>
+            <ScrollBar VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="20" Grid.Column="0" Grid.Row="1"></ScrollBar>
 
 
 
 
         </Grid>
-
+        
     </UserControl>
+    
 </Window>
