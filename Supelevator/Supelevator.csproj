@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Windows\CalcSmokeRoom1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +90,9 @@
     <Compile Include="Models\Distance.cs" />
     <Compile Include="Views\Windows\CalcSmokeCorridor1.xaml.cs">
       <DependentUpon>CalcSmokeCorridor1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\CalcSmokeRoom1.xaml.cs">
+      <DependentUpon>CalcSmokeRoom1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

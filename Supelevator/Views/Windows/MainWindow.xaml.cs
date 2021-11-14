@@ -38,6 +38,13 @@ namespace Supelevator
             this.Close();
         }
 
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            CalcSmokeRoom1 CalcSmokeRoom1Window = new CalcSmokeRoom1();
+            CalcSmokeRoom1Window.Show();
+            this.Close();
 
+
+        }
     }
 }

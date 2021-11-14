@@ -16,7 +16,6 @@ H:\25. Программа на C#. По ВНИИПО\1. Подпор возду�
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.exe.config
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.exe
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Supelevator.pdb
-H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csprojAssemblyReference.cache
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\App.g.cs
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.cache
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator_MarkupCompile.lref
@@ -36,7 +35,6 @@ H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\RibbonControlsLibrary.pdb
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\RibbonControlsLibrary.xml
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Microsoft.Windows.Shell.pdb
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Microsoft.Windows.Shell.xml
-H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.CopyComplete
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.dll
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.Core.dll
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.dll
@@ -44,3 +42,6 @@ H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\System.Windows.Interactivity.d
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.xml
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.xml
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.Core.xml
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.AssemblyReference.cache
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeRoom1.g.cs
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeRoom1.baml

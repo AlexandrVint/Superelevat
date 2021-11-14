@@ -34,7 +34,7 @@
             
         </Button>
 
-        <Button Name="Button2" Grid.Row="1" Grid.Column="1" Margin="0"  Background="White" FontSize="18" >
+        <Button Name="Button2" Grid.Row="1" Grid.Column="1" Margin="0"  Background="White" FontSize="18" Click="Button2_Click" >
             <TextBlock Text="Расчет дымоудаления непосредственно из помещения"
                        TextWrapping="Wrap"
                        TextAlignment="Center" Height="80" Width="250"></TextBlock>
