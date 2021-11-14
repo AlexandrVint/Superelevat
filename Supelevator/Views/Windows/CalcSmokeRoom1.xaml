@@ -97,7 +97,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="400"></ColumnDefinition>
                                     <ColumnDefinition Width="280"></ColumnDefinition>
-                                    <ColumnDefinition Width="200"></ColumnDefinition>
+                                    <ColumnDefinition Width="350"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <Label Content="Наименование помещения" Grid.Row="0" Grid.Column="0" Margin="0,5,0,5"></Label>
                                 <TextBox Grid.Row="0" Grid.Column="0" Height="25" Width="300" HorizontalAlignment="Left" Margin="0,0,0,14"></TextBox>
@@ -123,8 +123,25 @@
                                         <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="214,5,0,5" Height="25" Width="50"/>
 
                                     </Grid>
+                                    
 
 
+                                </GroupBox>
+                                <GroupBox Header="Температура воздуха, С°" VerticalAlignment="Top" Height="80" Width="250" Grid.Row="0" Grid.Column="3" Margin="0,-5,0,0" HorizontalAlignment="Left">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="80"></RowDefinition>
+                                          
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"> </ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Content="Температура внутреннего воздуха, С°" Grid.Row="0" Margin="0,0,0,0"></Label>
+                                        <TextBox Height="25" Width="100" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Left"></TextBox>
+                                    </Grid>
+                                    
+                                    
+                                    
                                 </GroupBox>
 
 
