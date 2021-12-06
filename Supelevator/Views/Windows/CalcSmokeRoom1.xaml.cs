@@ -11,8 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Data.SQLite;
 using Supelevator.Views.Windows;
+using Supelevator.Models;
+using Supelevator.Base;
+using System.Data.Entity;
 
 
 
@@ -23,12 +26,17 @@ namespace Supelevator.Views.Windows
     /// </summary>
     public partial class CalcSmokeRoom1 : Window
     {
+        ModelFireLoad db;
         public CalcSmokeRoom1()
         {
             InitializeComponent();
 
             TextBlock1.Focusable = false;
-            
+            db = new ModelFireLoad();
+            db.FireLoadInfos.Load();
+            DataGridRoom1.ItemsSource = db.FireLoadInfos.Local.ToBindingList();
+            this.Closing += WindowCorridor1_Closing;
+
 
         }
 
@@ -400,6 +408,33 @@ namespace Supelevator.Views.Windows
         private void CalcSmokeRoom_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void WindowCorridor1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            db.Dispose();
+
+        }
+
+        private void buttonUploadFireLoad_Click(object sender, RoutedEventArgs e)
+        {
+            db.SaveChanges();
+        }
+
+        private void buttonRemoveFireLoad_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataGridRoom1.SelectedItems.Count>0)
+            {
+                for ( int i = 0; i< DataGridRoom1.SelectedItems.Count; i++)
+                {
+                    FireLoadInfo material = DataGridRoom1.SelectedItems[i] as FireLoadInfo;
+                    if (material != null)
+                    {
+                        db.FireLoadInfos.Remove(material);
+                    }
+                }
+            }
+            db.SaveChanges();
         }
     }
 

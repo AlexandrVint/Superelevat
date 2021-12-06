@@ -45,3 +45,10 @@ H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\Caliburn.Micro.Platform.Core.x
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.AssemblyReference.cache
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeRoom1.g.cs
 H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Views\Windows\CalcSmokeRoom1.baml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\System.Data.SQLite.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\System.Data.SQLite.xml
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\Supelevator.csproj.CopyComplete
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.SqlServer.dll
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.xml
+H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.SqlServer.xml
