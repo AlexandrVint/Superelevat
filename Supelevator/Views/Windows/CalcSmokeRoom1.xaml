@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Supelevator.Views.Windows"
         mc:Ignorable="d"
-        Title="CalcSmokeCorridor1" Height="622.333" Width="1266.667" Closing="WindowCorridor1_Closing">
+        Title="CalcSmokeCorridor1" Height="800" Width="1266.667" Closing="WindowCorridor1_Closing">
 
     <UserControl Loaded="UserControl_Loaded">
 
@@ -72,14 +72,15 @@
             </r:Ribbon>
 
 
-            <TabControl Grid.Row="1" Grid.ColumnSpan="6" Margin="22,0,0,0">
+            <TabControl Grid.Row="1" Grid.ColumnSpan="6" Margin="22,8,0,0">
                 <TabItem>
                     <TabItem.Header>Расчет</TabItem.Header>
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="100"></RowDefinition>
                             <RowDefinition Height="150"></RowDefinition>
-                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="100"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"></ColumnDefinition>
@@ -139,7 +140,7 @@
                                 </GroupBox>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Пожарная нагрузка" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Height="277" Grid.RowSpan="2">
+                        <GroupBox Header="Пожарная нагрузка" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Height="220" Grid.RowSpan="2">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="50"></RowDefinition>
@@ -175,7 +176,31 @@
 
 
                         </GroupBox>
+                        <GroupBox Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="3" Margin="0,0,0,-29" Header="Тип помещения" Height="125">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Content="Зальное помещение различного назначения, в том числе зрительные и торговые, конференц-залы, спортзалы с местами для зрителей и других подобных помещенияй. Атриумы галерейного типа (формула 7)" Grid.Row="0" Grid.ColumnSpan="3" FontSize="12" Margin="5"></RadioButton>
+                                <RadioButton Content="Атриумы конструктивно изолированные от этажей здания. (формула 8)" Grid.Row="1" Grid.ColumnSpan="3" FontSize="12" Margin="5"></RadioButton>
+                                <RadioButton Content="При возникновении пожара в объеме атриума непосредственно под галереей в уровне основания этого атриума (формула 9)" Grid.Row="2" Grid.ColumnSpan="3" FontSize="12" Margin="5"></RadioButton>
+                                <RadioButton Content="Автостоянка закрытая надземная или подземная" Grid.Row="3" Grid.ColumnSpan="3" FontSize="12" Margin="5"></RadioButton>
+                                
+                            </Grid>
 
+
+
+
+
+                        </GroupBox>
 
                     </Grid>
 
