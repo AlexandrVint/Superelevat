@@ -52,6 +52,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="GsmFlowCalc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GsmFlowCalc.dll</HintPath>
+    </Reference>
     <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Microsoft Ribbon for WPF\V4.0\RibbonControlsLibrary.dll</HintPath>
@@ -102,8 +106,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Base\ModelFireLoad.cs" />
+    <Compile Include="Infrastructure\Commands\Base\Command.cs" />
+    <Compile Include="Infrastructure\Commands\LambdaCommand.cs" />
     <Compile Include="Models\Distance.cs" />
     <Compile Include="Models\FireLoadInfo.cs" />
+    <Compile Include="ViewModels\Base\ViewModel.cs" />
+    <Compile Include="ViewModels\CalcSmokeRoom1ViewModel.cs" />
+    <Compile Include="ViewModels\GsmInRoomClass.cs" />
     <Compile Include="Views\Windows\CalcSmokeCorridor1.xaml.cs">
       <DependentUpon>CalcSmokeCorridor1.xaml</DependentUpon>
     </Compile>
@@ -143,11 +152,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
     <Folder Include="Internals\" />
     <Folder Include="Interpretators\" />
     <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Windows\window3.png" />

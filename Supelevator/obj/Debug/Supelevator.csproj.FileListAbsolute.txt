@@ -52,3 +52,4 @@ H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.dll
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.SqlServer.dll
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.xml
 H:\Coding\Prog1\Supelevator\Supelevator\bin\Debug\EntityFramework.SqlServer.xml
+H:\Coding\Prog1\Supelevator\Supelevator\obj\Debug\GeneratedInternalTypeHelper.g.cs

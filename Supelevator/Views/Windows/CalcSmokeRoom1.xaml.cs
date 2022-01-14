@@ -16,6 +16,12 @@ using Supelevator.Views.Windows;
 using Supelevator.Models;
 using Supelevator.Base;
 using System.Data.Entity;
+using Supelevator.ViewModels;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+
+
+
 
 
 
@@ -26,18 +32,32 @@ namespace Supelevator.Views.Windows
     /// </summary>
     public partial class CalcSmokeRoom1 : Window
     {
-        ModelFireLoad db;
+        private readonly ModelFireLoad db;
+        private readonly ObservableCollection<FireLoadInfo> fireLoadInfos = new ObservableCollection<FireLoadInfo>();
+
+        
         public CalcSmokeRoom1()
         {
+            
             InitializeComponent();
+            
+            db = new ModelFireLoad();
+            DataGridRoom1.ItemsSource = fireLoadInfos;
+            
+            DataGridRoom1.ItemsSource = db.FireLoadInfos.Local.ToBindingList();
+            db.FireLoadInfos.Load();
+            db.FireLoadInfos.ToList().ForEach(f => fireLoadInfos.Add(f));
+            db.SaveChanges();
+          //  DataGridRoom1.ItemsSource = fireLoadInfos;
+            
+            
+
 
             TextBlock1.Focusable = false;
-            db = new ModelFireLoad();
-            db.FireLoadInfos.Load();
-            DataGridRoom1.ItemsSource = db.FireLoadInfos.Local.ToBindingList();
+            //db = new ModelFireLoad();
+            //db.FireLoadInfos.Load();
+            //DataGridRoom1.ItemsSource = db.FireLoadInfos.Local.ToBindingList();
             this.Closing += WindowCorridor1_Closing;
-
-
         }
 
         public int mode;
@@ -418,6 +438,7 @@ namespace Supelevator.Views.Windows
 
         private void buttonUploadFireLoad_Click(object sender, RoutedEventArgs e)
         {
+            
             db.SaveChanges();
         }
 
@@ -436,6 +457,50 @@ namespace Supelevator.Views.Windows
             }
             db.SaveChanges();
         }
+
+        
+        private void buttonCalcFireInRoom_Click(object sender, RoutedEventArgs e)
+        {
+
+            GsmInRoomClass Gsm = new GsmInRoomClass();
+             Gsm.r = Double.Parse(r_TextBl.Text);
+
+
+            //var fireLoadInfos = (List<FireLoadInfo>)DataGridRoom1.ItemsSource;
+            //List<string> Q_list = fireLoadInfos.Select(f => f.HeatDouble.ToString()).ToList();
+
+
+            List<string> Q_list = fireLoadInfos.Select(f => f.HeatDouble.ToString()).ToList();
+
+            
+
+            
+           
+
+
+
+
+            // DataGridRoom1.ItemsSource = db.FireLoadInfos.Local.ToBindingList();
+
+
+            List<string> Q_list1 = new List<string>();
+            
+            //for (int i = 0; i < DataGridRoom1.Items.Count; i++)
+            //{
+
+            //    string name = ((FireLoadInfo)DataGridRoom1.Items[i]).HeatDouble.ToString();
+            //    Q_list.Add(name);
+            //    if (String.IsNullOrEmpty(name))
+            //    {
+            //        MessageBox.Show("Пустая ячейка");
+            //    }
+
+            //}
+            //MessageBox.Show("Привет");
+
+
+        }
+        
     }
 
 }
